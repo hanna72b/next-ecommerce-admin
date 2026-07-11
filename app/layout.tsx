@@ -35,9 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="fa" dir="rtl"
-      className=" h-full antialiased " suppressHydrationWarning
-
-    >
+      className=" h-full antialiased " suppressHydrationWarning    >
 
       <body className={iranSans.variable}>
         <ThemeProvider>

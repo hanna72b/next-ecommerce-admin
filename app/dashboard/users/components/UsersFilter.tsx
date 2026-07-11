@@ -10,9 +10,9 @@ import {
 
 export default function UsersFilter() {
     return (
-        <div className="mt-10 mb-8 flex flex-col gap-4 lg:flex-row lg:items-end">
+        <div className="mt-10 mb-8  flex flex-col gap-4 lg:flex-row lg:items-end">
 
-            <div className="flex flex-col gap-2 lg:w-80">
+            <div className=" flex flex-col gap-2 lg:w-80">
                 <Label className="text-xs text-muted-foreground">
                     جستجو
                 </Label>
@@ -20,7 +20,7 @@ export default function UsersFilter() {
                 <Input placeholder="نام یا شماره موبایل..." />
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="custom-style-select flex flex-col gap-2">
                 <Label className="text-xs text-muted-foreground">
                     وضعیت
                 </Label>
@@ -46,7 +46,7 @@ export default function UsersFilter() {
                 </Select>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="custom-style-select flex flex-col gap-2">
                 <Label className="text-xs text-muted-foreground">
                     نقش
                 </Label>
@@ -72,7 +72,7 @@ export default function UsersFilter() {
                 </Select>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="custom-style-select flex flex-col gap-2">
                 <Label className="text-xs text-muted-foreground">
                     مرتب‌سازی
                 </Label>

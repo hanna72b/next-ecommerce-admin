@@ -163,3 +163,9 @@
 .hiddenScrollStyle::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 1024px) {
+  .custom-style-select button {
+    width: 100% !important;
+  }
+}

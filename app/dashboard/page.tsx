@@ -94,7 +94,7 @@ export default function DashboardPage() {
                 ))}
             </section>
 
-            <section className="grid gap-6 lg:grid-cols-3">
+            <section className="flex flex-col lg:grid gap-6 lg:grid-cols-3">
                 <div className="lg:col-span-2">
                     <Card>
                         <CardHeader className="p-0 mb-2 ms-6">
@@ -103,7 +103,7 @@ export default function DashboardPage() {
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className="lg:col-span-2">
+                            <div className=" lg:col-span-2">
                                 <UsersTable users={users} />
                             </div>
                         </CardContent>
