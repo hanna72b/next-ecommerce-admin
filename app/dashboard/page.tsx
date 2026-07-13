@@ -33,7 +33,7 @@ export default function DashboardPage() {
         },
         {
             title: "درآمد",
-            value: "۱۲,۵۰۰,۰۰۰ تومان",
+            value: 1250000,
             icon: Wallet,
         },
     ];

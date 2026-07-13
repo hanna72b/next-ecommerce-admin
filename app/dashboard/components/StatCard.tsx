@@ -24,7 +24,7 @@ export default function StatCard({
 
             <CardContent>
                 <p className="text-3xl font-bold text-green-800">
-                    {value}
+                   {typeof value === "number" ? value.toLocaleString() : value}
                 </p>
             </CardContent>
         </Card>

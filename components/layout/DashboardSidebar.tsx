@@ -2,11 +2,8 @@
 
 import Link from "next/link";
 import {
-    LayoutDashboard,
-    Package,
-    ShoppingCart,
-    Users,
     LogOut,
+    LucideIcon,
     Store,
 } from "lucide-react";
 
@@ -25,33 +22,18 @@ import {
 import { cn } from "@/lib/utils";
 
 
+type DashboardSidebarProps = {
+    menus: {
+        title: string;
+        url: string;
+        icon: LucideIcon;
+    }[];
+};
 
-const items = [
-    {
-        title: "داشبورد",
-        url: "/dashboard",
-        icon: LayoutDashboard,
-    },
-    {
-        title: "کاربران",
-        url: "/dashboard/users",
-        icon: Users,
-    },
-    {
-        title: "محصولات",
-        url: "/dashboard/products",
-        icon: Package,
-    },
-    {
-        title: "سفارش‌ها",
-        url: "/dashboard/orders",
-        icon: ShoppingCart,
-    },
-];
 
-export default function DashboardSidebar() {
+export default function DashboardSidebar({ menus }: DashboardSidebarProps) {
 
-    const { state } = useSidebar();
+    const { state, setOpenMobile } = useSidebar();
 
     const isCollapsed = state === "collapsed";
 
@@ -77,10 +59,10 @@ export default function DashboardSidebar() {
 
                     <SidebarGroupContent>
                         <SidebarMenu>
-                            {items.map((item) => (
+                            {menus.map((item) => (
                                 <SidebarMenuItem key={item.url}>
                                     <SidebarMenuButton>
-                                        <Link href={item.url} className="flex items-center gap-2" >
+                                        <Link href={item.url} onClick={() => setOpenMobile(false)} className="flex items-center gap-2" >
                                             <item.icon />
                                             <span className="pb-1">{item.title}</span>
                                         </Link>
